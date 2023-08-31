@@ -43,7 +43,7 @@
         <div>
           <h2 class="text-5xl mb-10">Search your phone</h2>
         </div>
-        <div>
+        <div class="">
           <div class="flex justify-center">
             <!-- <img src="img/Frame.png" alt=""> -->
             <input id="input-serch" type="text" placeholder="Search your phone" class="input w-full max-w-xs bg-slate-200" />
@@ -54,20 +54,32 @@
       </div>
     </section>
     <section>
+      <div id="loading-spinner" class="text-center my-40 hidden">
+        <span class="loading loading-spinner loading-lg"></span>
+      </div>
       <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- <div class="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div> -->
-
+      </div>
+      <!-- show all button -->
+      <div id="show-all-container" class="hidden text-center mt-5">
+        <button onclick="handleShowAll()" class="btn btn-accent">Show All</button>
       </div>
     </section>
+    <!-- show details modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    
+    <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle p-8">
+      <form method="dialog" class="modal-box">
+        <h3 id="phone-name" class="font-bold text-5xl mb-4 text-center "></h3>
+        <div id="show-detail-container">
+
+        </div>
+        
+        <div class="modal-action">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn bg-red-500">Close</button>
+        </div>
+      </form>
+    </dialog>
   </main>
   <footer>
 
